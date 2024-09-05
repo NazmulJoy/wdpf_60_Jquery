@@ -17,13 +17,16 @@
         </select>
         <button type="button" id="1">click</button>
     </form>
-    
+    <div id="show">
+
+    </div>
     <script>
         $(document).ready(function(){
            $("#1").click(function(){
             let disid = $("#2").val();
             $.get("get_data.php",{id:disid},function(data,st){
-                        alert(data);
+                        //alert(data);
+                        $("#show").html(data)
                     });   
            })
         })
