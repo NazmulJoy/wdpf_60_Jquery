@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        .style1{
+            font-size: large;
+            color: brown;
+        }
+        .style2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="style1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non eum enim, fugit necessitatibus minima velit saepe praesentium hic repudiandae consequuntur aspernatur labore voluptatum facere nisi nihil officiis quasi corrupti.</div>
+    
+    <button id="2">add</button>
+    <button id="3">remove</button>
+    
+    <script>
+        $(document).ready(function(){
+            $("#2").click(function(){
+                $("div").addClass("style2"); 
+            })
+            $("#3").click(function(){
+                $("div").removeClass("style2");
+            })
+           
+        })
+    </script>
+</body>
+</html>

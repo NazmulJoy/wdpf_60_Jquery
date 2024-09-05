@@ -1,0 +1,2 @@
+this is the message from txt file 
+and displaying through ajax load method.

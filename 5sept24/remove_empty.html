@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="1" style="height: 65px;width: 800px;border: 1px solid red;background-color: aqua;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eligendi dicta laudantium necessitatibus aspernatur eaque delectus maxime error culpa incidunt, fugit ipsam perferendis tempore alias adipisci accusantium repellat voluptates eius!
+    </div>
+    <button id="2">Remove</button>
+    <button id="3">hide</button>
+    <button id="4">empty</button>
+    <script>
+        $(document).ready(function(){
+            $("#2").click(function(){
+                $("#1").remove(); //totally remove from everywhere 
+            })
+            $("#3").click(function(){
+                $("#1").hide(); //hide from output but script exists
+            })
+            $("#4").click(function(){
+                $("#1").empty(); //just empty content from both end
+            })
+        })
+    </script>
+</body>
+</html>
