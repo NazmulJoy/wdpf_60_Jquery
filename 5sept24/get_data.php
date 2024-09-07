@@ -3,7 +3,7 @@ $db = new mysqli("localhost:3310","root","","jquery");
 
 $id = $_GET['id'];
 
- $data = $db->query("SELECT * FROM data WHERE id = '$id'");
+ $data = $db->query("SELECT * FROM datas WHERE id = '$id'");
     $row = $data->fetch_assoc();
     echo $row['id']." ".$row['name']." ".$row['details'];
 //echo "Hello php";

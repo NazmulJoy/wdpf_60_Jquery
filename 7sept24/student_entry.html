@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form action="" id="stform">
+        Name: <input type="text"  name="name" placeholder="Enter your name"> <br>
+        Date of Birth: <input type="date"  name="dob"> <br>
+        Gender: <input type="radio"  name="gender" value='male'> Male
+        <input type="radio"  name="gender" value='female'> Female <br>
+        Email: <input type="email"  name="email" placeholder="Enter your email"> <br>
+        Phone: <input type="text"  name="phone" placeholder="Enter your phone number"> <br>
+        Address: <textarea name="address"  placeholder="Enter your address"></textarea> <br>
+        <input type="button" id="ab" name="submit" value="submit">
+    </form>
+    <div id="stlist">
+
+    </div>
+    <script>
+        $(document).ready(function(){
+            get_students();
+          
+            $("#ab").click(function(){
+            let content = $('#stform').serialize();
+           console.log(content);
+            
+           $.post("insert.php",{mydata:content},function(data,status){
+                alert(data);
+           });
+           get_students();
+           });
+
+           function get_students(){
+            $.get('students.php',function(data,status){
+            $('#stlist').html(data);
+           })
+           }
+           
+        })
+    </script>
+</body>
+</html>
