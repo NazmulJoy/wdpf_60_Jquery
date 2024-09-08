@@ -22,8 +22,8 @@
     </div>
     <script>
         $(document).ready(function(){
-            get_students();
-          
+            
+            $('#stlist').load("students.php");
             $("#ab").click(function(){
             let content = $('#stform').serialize();
            console.log(content);
@@ -31,15 +31,9 @@
            $.post("insert.php",{mydata:content},function(data,status){
                 alert(data);
            });
-           get_students();
-           });
-
-           function get_students(){
-            $.get('students.php',function(data,status){
-            $('#stlist').html(data);
-           })
-           }
            
+            $('#stlist').load("students.php");
+           })
         })
     </script>
 </body>
